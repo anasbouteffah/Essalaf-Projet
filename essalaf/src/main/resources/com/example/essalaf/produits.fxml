@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.essalaf.ProduitController">
+    <children>
+        <Pane layoutY="-9.0" prefHeight="417.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="btnClient" layoutX="-1.0" layoutY="25.0" mnemonicParsing="false" onAction="#gestionClientsPage" prefHeight="45.0" prefWidth="200.0" text="   GESTION DES CLIENTS" />
+                <Separator layoutY="87.0" prefWidth="200.0" />
+                <Button fx:id="btnCommande" layoutY="209.0" mnemonicParsing="false" onAction="#gestionCommandesPage" prefHeight="45.0" prefWidth="200.0" text="COMMANDES ET CREDIT" />
+                <Separator layoutX="-1.0" layoutY="183.0" prefWidth="200.0" />
+                <Separator layoutX="-1.0" layoutY="272.0" prefWidth="200.0" />
+                <Button fx:id="btnTableau" layoutY="296.0" mnemonicParsing="false" onAction="#tableauPage" prefHeight="45.0" prefWidth="200.0" text="TABLEAU DU BOARD" />
+            <Button fx:id="btnProduit" layoutX="-1.0" layoutY="113.0" mnemonicParsing="false" onAction="#gestionProduitsPage" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: grey;" text="   GESTION DES PRODUITS" textFill="WHITE" />
+            </children>
+        </Pane>
+      <Label layoutX="251.0" layoutY="2.0" prefHeight="29.0" prefWidth="385.0" text="Enregistrement des produits ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="84.0" prefHeight="17.0" prefWidth="106.0" text="Prix produit (DH) :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="47.0" prefHeight="17.0" prefWidth="106.0" text="Nom produit :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomProduit" layoutX="404.0" layoutY="45.0" />
+      <TextField fx:id="prixProduit" layoutX="405.0" layoutY="82.0" />
+      <Button fx:id="btnenregistrer" layoutX="261.0" layoutY="128.0" mnemonicParsing="false" onAction="#enregistrerProduit" prefHeight="29.0" prefWidth="106.0" text="Enregistrer" />
+      <Button fx:id="btnSuprimer" layoutX="405.0" layoutY="128.0" mnemonicParsing="false" onAction="#suprimerProduit" prefHeight="29.0" prefWidth="106.0" text="Suprimer" />
+      <TableView fx:id="tvProduit" layoutX="244.0" layoutY="166.0" prefHeight="200.0" prefWidth="479.0">
+        <columns>
+          <TableColumn fx:id="colProduit" prefWidth="160.0" text="Nom produit" />
+          <TableColumn fx:id="colPrix" prefWidth="159.0" text="Prix produit" />
+            <TableColumn fx:id="colQuantite" prefWidth="159.0" text="Quantité disponible" />
+        </columns>
+      </TableView>
+      <Label layoutX="244.0" layoutY="379.0" prefHeight="29.0" prefWidth="385.0" text="Ajouter la quantité d'un produit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="417.0" prefHeight="17.0" prefWidth="106.0" text="Nom produit :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomProduitQ" layoutX="362.0" layoutY="415.0" />
+      <Label layoutX="244.0" layoutY="449.0" prefHeight="17.0" prefWidth="106.0" text="Nombre :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombre" layoutX="362.0" layoutY="447.0" />
+      <Button fx:id="btnAjouter" layoutX="244.0" layoutY="483.0" mnemonicParsing="false" onAction="#ajouterProduit" prefHeight="29.0" prefWidth="106.0" text="Ajouter" />
+      <Button fx:id="btnRetirer" layoutX="374.0" layoutY="483.0" mnemonicParsing="false" onAction="#retirerProduit" prefHeight="29.0" prefWidth="106.0" text="Retirer" />
+    </children>
+</AnchorPane>
